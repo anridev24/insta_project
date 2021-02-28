@@ -1,0 +1,35 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size: large;
+}
+
+li {
+  float: left;
+  margin-right: 15px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+li a:hover {
+  background-color: #546de5;
+}
+
+.ActiveLink {
+  background-color: #546de5;
+}
+
+.logoutButton {
+  margin-right: 0;
+}

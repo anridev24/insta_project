@@ -1,0 +1,42 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 10rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+
+  .PlaceholderText {
+    opacity: 0.6;
+  }
+
+  .CardsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    transition: 0.5s all;
+    font-weight: 600;
+  }
+
+  button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+  }
+  button:disabled {
+    filter: grayscale(0.1);
+    cursor: not-allowed;
+  }
+}

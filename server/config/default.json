@@ -1,0 +1,4 @@
+{
+  "mongoUri": "mongodb+srv://anridev24:1UqaqhKuGh9j1VqO@cluster0.6marq.mongodb.net/instaproject?retryWrites=true&w=majority",
+  "jwtSecret": "43vvb45j132mvccm34311ws23543m4"
+}

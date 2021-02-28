@@ -1,0 +1,80 @@
+.Wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  min-width: 500px;
+  min-height: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Title {
+  font-weight: bold;
+  align-self: center;
+
+  span {
+    color: #da6776;
+  }
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .InputField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem;
+
+    input {
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem 1rem;
+    }
+
+    label {
+      font-weight: 500;
+      font-size: larger;
+    }
+  }
+
+  .ButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      transition: 0.5s all;
+      font-weight: 600;
+    }
+
+    button:hover {
+      filter: brightness(80%);
+    }
+  }
+
+  .ErrorMessage {
+    color: #da6776;
+    font-weight: bold;
+  }
+}

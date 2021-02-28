@@ -1,0 +1,62 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  border: 3px solid white;
+  transition: 0.3s all;
+
+  .InfoField {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s all;
+    h2 {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .InfoField:hover {
+    cursor: pointer;
+  }
+
+  .Avatar {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .SaveButton {
+    height: auto;
+    width: 10%;
+  }
+
+  .CardFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 1rem 2rem;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+
+      span {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.Card:hover {
+  filter: grayscale(0.5);
+  border: 3px solid #546de5;
+}

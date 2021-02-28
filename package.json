@@ -1,0 +1,17 @@
+{
+  "name": "insta_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development concurrently \" npm run start --prefix client \" \" npm run dev --prefix server \"",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "cross-env NODE_ENV=production npm run start --prefix server"
+  },
+  "author": "Andronik Nazaryan",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "cross-env": "^7.0.3"
+  }
+}
