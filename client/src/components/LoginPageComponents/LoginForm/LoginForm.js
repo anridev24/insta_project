@@ -27,7 +27,8 @@ const LoginForm = () => {
     setLoading(true)
     axios
       .post('/api/account/login', {
-        ...form,
+        email: form.email.toLowerCase(),
+        password: form.password,
       })
       .then(response => {
         if (response.status === 200) {

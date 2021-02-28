@@ -32,20 +32,18 @@ const SavedItemsContainer = () => {
     axios
       .post('/api/account/delete', data)
       .then(response => {
-        if (response.status === 200) {
-          if (item.type === 'user') {
-            const newSavedContent = {
-              ...savedContent,
-              users: savedContent.users.filter(savedItem => savedItem.username !== item.username),
-            }
-            setSavedContent(prevState => newSavedContent)
-          } else {
-            const newSavedContent = {
-              ...savedContent,
-              users: savedContent.hashtags.filter(savedItem => savedItem.name !== item.name),
-            }
-            setSavedContent(prevState => newSavedContent)
+        if (item.type === 'user') {
+          const newSavedContent = {
+            ...savedContent,
+            users: savedContent.users.filter(savedItem => savedItem.username !== item.username),
           }
+          setSavedContent(prevState => newSavedContent)
+        } else if (item.type === 'hashtag') {
+          const newSavedContent = {
+            ...savedContent,
+            hashtags: savedContent.hashtags.filter(savedItem => savedItem.name !== item.name),
+          }
+          setSavedContent(prevState => newSavedContent)
         }
       })
       .catch(e => {})

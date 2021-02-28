@@ -33,14 +33,6 @@
     }
   }
 
-  .InfoField:hover {
-    cursor: pointer;
-  }
-
-  .InfoField:hover .OperationIcon {
-    color: #546de5;
-  }
-
   .Avatar {
     width: 20%;
     height: auto;
@@ -72,13 +64,14 @@
   }
 }
 .Card:hover {
-  filter: grayscale(0.5);
   border: 3px solid #546de5;
+  cursor: pointer;
 }
 
+.Card:hover .OperationIcon {
+  color: #546de5;
+}
 .SavedCard {
   border: 3px solid #546de5;
-}
-.SavedCard:hover {
   cursor: not-allowed !important;
 }
