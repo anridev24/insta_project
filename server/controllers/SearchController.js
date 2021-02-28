@@ -42,6 +42,7 @@ exports.get_results_get = async (req, res) => {
 
     res.send(dataPayload)
   } catch (e) {
+    console.log(e)
     return res.status(500).json({ message: 'Internal Server Error', error: e.message })
   }
 }
