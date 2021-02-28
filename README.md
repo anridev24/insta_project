@@ -3,6 +3,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
 No **UI Libary** used.
 
+
+# Problem with Instagram :warning:
+
+when the app tries to access the instagram url for search results it return [429] **Rate Limit**
+try it locally while in dev mode it should work fine, probably problem with heroku.
+
+### Test Account
+Email: tester@gmail.com
+Password: test123
+
 ## Run in Development mode
 
 1. Git clone
@@ -16,7 +26,3 @@ No **UI Libary** used.
 
 ### Application is deployed on Heroku [InstaProject](https://insta-project-anridev24.herokuapp.com/)
 
-## Problem with Instagram :warning:
-
-when the app tries to access the instagram url for search results it return [429] **Rate Limit**
-try it locally while in dev mode it should work fine, probably problem with heroku.
