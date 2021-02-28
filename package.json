@@ -10,8 +10,10 @@
   },
   "author": "Andronik Nazaryan",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^6.0.0",
+  "dependencies": {
     "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
   }
 }
