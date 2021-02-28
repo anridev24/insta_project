@@ -38,13 +38,13 @@ const SavedItemsContainer = () => {
               ...savedContent,
               users: savedContent.users.filter(savedItem => savedItem.username !== item.username),
             }
-            setSavedContent(newSavedContent)
+            setSavedContent(prevState => newSavedContent)
           } else {
             const newSavedContent = {
               ...savedContent,
               users: savedContent.hashtags.filter(savedItem => savedItem.name !== item.name),
             }
-            setSavedContent(newSavedContent)
+            setSavedContent(prevState => newSavedContent)
           }
         }
       })

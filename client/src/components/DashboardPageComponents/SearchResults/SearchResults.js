@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classes from './SearchResults.module.scss'
 import axios from 'axios'
 import Loader from '../../Shared/Loader/Loader'
@@ -70,7 +70,18 @@ const SearchResults = ({ loading, setSearchResults, searchResults, savedContent,
           Hashtags
         </button>
       </div>
-      {!searchResults ? <p className={classes.PlaceholderText}>Search for something</p> : null}
+      {!searchResults ? (
+        <p className={classes.PlaceholderText}>Search for something</p>
+      ) : (
+        <div className={classes.ResultsBox}>
+          <h4>
+            We found <span>{searchResults.users.length}</span> Users and <span>{searchResults.hashtags.length}</span>
+            Hashtags
+          </h4>
+
+          <p className={classes.PlaceholderText}>Select the type and enjoy stalking 🔍</p>
+        </div>
+      )}
       {loading && <Loader />}
       {selectedType ? (
         <div className={classes.CardsWrapper}>

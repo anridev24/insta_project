@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './InstagramTagCard.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const InstagramTagCard = ({ hashtag, operation, icon, saved }) => {
-  const isSaved = saved ? '#546de5' : '#2f3640'
-
+  const [uiSaved, setUiSaved] = useState(false)
+  const isSaved = saved || uiSaved ? '#546de5' : '#2f3640'
+  const isSavedCard = saved || uiSaved ? classes.SavedCard : ''
+  const saveHandler = () => {
+    setUiSaved(true)
+  }
   return (
     <>
-      <div onClick={() => operation(hashtag)} className={classes.Card}>
+      <div
+        onClick={() => {
+          saveHandler()
+          operation(hashtag)
+        }}
+        className={[classes.Card, isSavedCard].join(' ')}>
         <div className={classes.InfoField}>
           <img className={classes.Avatar} src={hashtag.image} alt='user profile' />
           <div className={classes.HashtagInfocontainer}>
@@ -18,7 +27,7 @@ const InstagramTagCard = ({ hashtag, operation, icon, saved }) => {
             </p>
           </div>
 
-          <FontAwesomeIcon color={isSaved} size='3x' icon={icon} />
+          <FontAwesomeIcon className={classes.OperationIcon} color={isSaved} size='3x' icon={icon} />
         </div>
       </div>
     </>
