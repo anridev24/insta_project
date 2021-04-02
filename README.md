@@ -24,5 +24,5 @@ Password: test123
 
 # Author anridev24
 
-### Application is deployed on Heroku [InstaProject](https://insta-project-anridev24.herokuapp.com/)
+
 
