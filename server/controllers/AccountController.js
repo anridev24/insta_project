@@ -1,7 +1,6 @@
 const Account = require('../models/Account')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const config = require('config')
 
 exports.register_post = async (req, res) => {
   try {
@@ -46,7 +45,7 @@ exports.login_post = async (req, res) => {
       return res.status(401).json({ message: 'Invalid credentials' })
     }
 
-    const token = jwt.sign({ userId: account.id }, config.get('jwtSecret'), {
+    const token = jwt.sign({ userId: account.id }, process.env.jwtSecret, {
       expiresIn: '45m',
     })
 
